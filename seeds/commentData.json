@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Comment 1 Title",
+    "comment": "This is the first comment for Post 1.",
+    "date_posted": "2023-08-20T12:00:00Z",
+    "user_id": 1,
+    "post_id": 1
+  },
+  {
+    "title": "Comment 2 Title",
+    "comment": "Here's another comment for Post 1.",
+    "date_posted": "2023-08-21T14:30:00Z",
+    "user_id": 2,
+    "post_id": 1
+  },
+  {
+    "title": "Comment 3 Title",
+    "comment": "This is a comment for Post 2.",
+    "date_posted": "2023-08-22T10:15:00Z",
+    "user_id": 3,
+    "post_id": 2
+  }
+]
