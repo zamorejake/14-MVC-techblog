@@ -26,7 +26,7 @@ In this project I practiced using the model, view, and controller setup to creat
 
 To create your own posts and comment you need to make an account! Use a proper email and a strong password. 
 
-![Random post page](https://github.com/zamorejake/14-MVC-techblog/blob/main/public/image.png)
+![Random post page](https://github.com/zamorejake/14-MVC-techblog/blob/main/public/image2.png)
 
 ## Credits
 
