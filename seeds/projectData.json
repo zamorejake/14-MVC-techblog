@@ -1,17 +1,20 @@
 [
   {
-    "name": "Music Near Me",
-    "description": "A mobile app that will send you notifications whenever a concert is playing in your area.",
-    "needed_funding": 5000
+    "title": "Building the Future with Quantum Computing",
+    "description": "Exploring the potential of quantum computing and its applications in cryptography, optimization, and machine learning.",
+    "date_posted": "2023-08-01T10:00:00Z",
+    "user_id": 1
   },
   {
-    "name": "The Ultimate Tech Quiz",
-    "description": "A web app that will give users 10 new technical questions each day and track their progress in things like programming, cybersecurity, database architecture, and more!",
-    "needed_funding": 10000
+    "title": "Cybersecurity in the Age of IoT",
+    "description": "Analyzing the challenges and strategies for securing the vast network of interconnected devices in the Internet of Things era.",
+    "date_posted": "2023-08-03T14:30:00Z",
+    "user_id": 2
   },
   {
-    "name": "Roll 'Em Up",
-    "description": "A game for Windows and macOS where players move a ball through a series of increasingly challenging mazes.",
-    "needed_funding": 800
+    "title": "AR and VR: Transforming User Experiences",
+    "description": "Diving into the ways augmented reality and virtual reality technologies are reshaping user interactions and entertainment.",
+    "date_posted": "2023-08-08T12:45:00Z",
+    "user_id": 3
   }
 ]
