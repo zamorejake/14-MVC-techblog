@@ -17,7 +17,7 @@ const loginFormHandler = async (event) => {
       // If successful, redirect the browser to the profile page
       document.location.replace('/profile');
     } else {
-      alert('fail');
+      alert('Invalid username or password');
     }
   }
 };
@@ -39,7 +39,9 @@ const signupFormHandler = async (event) => {
     if (response.ok) {
       document.location.replace('/profile');
     } else {
-      alert(response.statusText);
+      alert(
+        'Please use a valid email as well as a strong password. Please use more than 8 letters and numbers'
+      );
     }
   }
 };
