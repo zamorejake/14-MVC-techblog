@@ -22,7 +22,7 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-.tech-post-box {
+.tech-post-box, .comments-section {
   border: 1px solid #ccc;
   padding: 20px;
   margin-bottom: 20px;
@@ -30,6 +30,39 @@ header, .project:not(:last-child) {
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #50515A;
+}
+
+.box {
+  border: 1px solid #ccc;
+  padding: 5px;
+  margin-bottom: 10px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.1);
+  background-color: rgb(159, 154, 154);
+}
+
+.comment-form{
+  background-color: #474545; /* Set your desired background color here */
+  padding: 10px; /* Add padding for spacing around the content */
+  display: flex;
+  width: 20em;
+  justify-content: center;
+  align-items: center;
+}
+
+  .comments-section, .comment {
+  border: 1px solid #ccc;
+  padding: 20px;
+  margin-bottom: 20px;
+  margin-top: 1.5em;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: rgb(62, 60, 60);
+}
+.comment {
+  background-color: rgb(94, 91, 91);
 }
 
 .tech-post-boxID {
