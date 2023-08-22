@@ -1,26 +1,24 @@
-{{#each techBlogPosts as |post| }}
-<div class="tech-post-box">
-  <div class="row mb-4 tech-post">
-    <div class="col-md-12">
-      <h2 class="post-title">
-        <a href="/post/{{post.id}}">{{post.title}}</a>
-      </h2>
-      <div class="posted-info">
-        <div class="posted-by">Posted by {{post.user.name}} on {{format_date post.date_posted}}</div>
+{{#each techBlogPosts as |post|}}
+  <div class='tech-post-box'>
+    <div class='row mb-4 tech-post'>
+      <div class='col-md-12'>
+        <h2 class='post-title'>
+          <a href='/post/{{post.id}}'>{{post.title}}</a>
+        </h2>
+        <div class='posted-info'>
+          <div class='posted-by'>Posted by
+            {{post.user.name}}
+            on
+            {{format_date post.date_posted}}</div>
+        </div>
+      </div>
+    </div>
+    <div class='row mb-4'>
+      <div class='col-md-12'>
+        <p class='description'>
+          {{post.description}}
+        </p>
       </div>
     </div>
   </div>
-  <div class="row mb-4">
-    <div class="col-md-12">
-      <p class="description">
-        {{post.description}}
-      </p>
-    </div>
-  </div>
-</div>
 {{/each}}
-
-
-
-
-

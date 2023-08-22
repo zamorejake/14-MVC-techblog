@@ -3,7 +3,8 @@
   color: white;
 }
 
-header, .project:not(:last-child) {
+header,
+.project:not(:last-child) {
   border-bottom: 1px solid #ccc;
 }
 
@@ -22,14 +23,15 @@ header, .project:not(:last-child) {
   text-decoration: underline;
 }
 
-.tech-post-box, .comments-section {
+.tech-post-box,
+.comments-section {
   border: 1px solid #ccc;
   padding: 20px;
   margin-bottom: 20px;
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #50515A;
+  background-color: #50515a;
 }
 
 .box {
@@ -42,7 +44,7 @@ header, .project:not(:last-child) {
   background-color: rgb(159, 154, 154);
 }
 
-.comment-form{
+.comment-form {
   background-color: #474545; /* Set your desired background color here */
   padding: 10px; /* Add padding for spacing around the content */
   display: flex;
@@ -51,7 +53,8 @@ header, .project:not(:last-child) {
   align-items: center;
 }
 
-  .comments-section, .comment {
+.comments-section,
+.comment {
   border: 1px solid #ccc;
   padding: 20px;
   margin-bottom: 20px;
@@ -74,35 +77,40 @@ header, .project:not(:last-child) {
   background-color: #f9f9f9;
   border-radius: 8px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-  background-color: #50515A;
+  background-color: #50515a;
 }
 
-.descriptionID, .posted-byID {
+.descriptionID,
+.posted-byID {
   font-size: 1.25rem;
   color: white;
 }
 
-.teal, .post-title a{
-  color: #6FFFFF;
+.teal,
+.post-title a {
+  color: #6fffff;
 }
 .white {
   color: white;
 }
 
-.description, .posted-by {
+.description,
+.posted-by {
   font-size: 1.25rem;
   color: white;
 }
 
-.teal, .post-title a{
-  color: #6FFFFF;
+.teal,
+.post-title a {
+  color: #6fffff;
 }
 
-.description2, .posted-by2 {
+.description2,
+.posted-by2 {
   font-size: 2.25rem;
   color: white;
 }
 
-.post-title2{
+.post-title2 {
   font-size: 3.25rem;
 }

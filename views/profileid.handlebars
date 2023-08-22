@@ -1,43 +1,53 @@
-<div class="tech-post-box">
-  <div class="row mb-4 tech-post">
-    <div class="col-md-12">
-      <h2 class="post-title2 teal">
+<div class='tech-post-box'>
+  <div class='row mb-4 tech-post'>
+    <div class='col-md-12'>
+      <h2 class='post-title2 teal'>
         {{post.title}}
       </h2>
-      <div class="posted-info">
-        <div class="posted-by2">Posted by {{post.user.name}} on {{format_date post.date_posted}}</div>
+      <div class='posted-info'>
+        <div class='posted-by2'>Posted by
+          {{post.user.name}}
+          on
+          {{format_date post.date_posted}}</div>
       </div>
     </div>
   </div>
-  <div class="row mb-4">
-    <div class="col-md-12">
-      <p class="description2">
+  <div class='row mb-4'>
+    <div class='col-md-12'>
+      <p class='description2'>
         {{post.description}}
       </p>
     </div>
   </div>
 </div>
-<div class="comments-section">
-  <h3 class="comment-heading white">Comments</h3>
-  <div class="comment-list">
+<div class='comments-section'>
+  <h3 class='comment-heading white'>Comments</h3>
+  <div class='comment-list'>
     {{#each comments}}
-      <div class="comment">
-        <p class="comment-user white">{{user.name}}: {{this.comment}}</p>
-        <p class="comment-date white">{{format_date this.date_posted}}</p>
+      <div class='comment'>
+        <p class='comment-user white'>{{user.name}}: {{this.comment}}</p>
+        <p class='comment-date white'>{{format_date this.date_posted}}</p>
       </div>
     {{/each}}
   </div>
   {{#if logged_in}}
-  <h4 class="comment-heading white">Write a comment ✏️</h4>
-  <form class="" action="/add-comment/{{post.id}}" method="POST">
-  <div class='comment-form comment'>
-    <textarea class="comment-input" name="comment" placeholder="Add a comment"></textarea>
-    <input type="hidden" name="user_id" value="{{user.id}}">
-    <input type="hidden" name="post_id" value="{{post.id}}"> 
-    <div><br><button class="comment-submit" type="submit">Submit</button></div>
-  </div>
-  </form>
+    <h4 class='comment-heading white'>Write a comment ✏️</h4>
+    <form class='' action='/add-comment/{{post.id}}' method='POST'>
+      <div class='comment-form comment'>
+        <textarea
+          class='comment-input'
+          name='comment'
+          placeholder='Add a comment'
+        ></textarea>
+        <input type='hidden' name='user_id' value='{{user.id}}' />
+        <input type='hidden' name='post_id' value='{{post.id}}' />
+        <div><br /><button
+            class='comment-submit'
+            type='submit'
+          >Submit</button></div>
+      </div>
+    </form>
   {{else}}
-        <a href="/login" class="teal box">Login to comment!</a>
+    <a href='/login' class='teal box'>Login to comment!</a>
   {{/if}}
 </div>

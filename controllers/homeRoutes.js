@@ -15,8 +15,10 @@ router.get('/', async (req, res) => {
     });
 
     // Serialize data so the template can read it
-    const techBlogPosts = projectData.map((project) => project.get({ plain: true }));
-  
+    const techBlogPosts = projectData.map((project) =>
+      project.get({ plain: true })
+    );
+
     res.render('articles', {
       techBlogPosts,
       logged_in: req.session.logged_in,
@@ -35,7 +37,7 @@ router.get('/post/:id', async (req, res) => {
           attributes: ['name'],
         },
         {
-          model: Comment, 
+          model: Comment,
           attributes: ['comment', 'date_posted'],
           include: [
             {
@@ -51,7 +53,7 @@ router.get('/post/:id', async (req, res) => {
 
     res.render('profileid', {
       post,
-      comments: post.comments, 
+      comments: post.comments,
       logged_in: req.session.logged_in,
     });
   } catch (err) {
@@ -63,8 +65,8 @@ router.post('/add-comment/:id', async (req, res) => {
   try {
     const newComment = {
       comment: req.body.comment,
-      user_id: req.session.user_id, 
-      post_id: req.body.post_id, 
+      user_id: req.session.user_id,
+      post_id: req.body.post_id,
     };
 
     await Comment.create(newComment);
@@ -78,18 +80,35 @@ router.post('/add-comment/:id', async (req, res) => {
 // Use withAuth middleware to prevent access to route
 router.get('/profile', withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
     const userData = await User.findByPk(req.session.user_id, {
       attributes: { exclude: ['password'] },
       include: [{ model: TechBlogPost }],
     });
 
     const user = userData.get({ plain: true });
-
     res.render('profile', {
       ...user,
       logged_in: true,
     });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.post('/create-techblog', async (req, res) => {
+  try {
+    const {
+      'techblog-title': techblogTitle,
+      'techblog-content': techblogContent,
+    } = req.body;
+
+    await TechBlogPost.create({
+      title: techblogTitle,
+      description: techblogContent,
+      user_id: req.session.user_id,
+    });
+
+    res.redirect('/profile');
   } catch (err) {
     res.status(500).json(err);
   }
